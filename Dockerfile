@@ -27,7 +27,7 @@ mkdir /scripts/pre-init.d && \
 chmod -R 755 /scripts && chmod -R a+rw /etc/ssmtp && chmod a+rw /etc/passwd
 
 # Your app
-ADD app/index.php /app/index.php
+ADD app/index.php /opt/app-root/src/
 
 # Exposed Port
 EXPOSE 8080
