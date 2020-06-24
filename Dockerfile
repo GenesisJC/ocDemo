@@ -11,5 +11,5 @@ RUN mkdir -p /var/www/html && echo "hello world!" >> /var/www/html/index.html &&
   chown -R apache:0 /var/www/html && \
   chmod -R g+rwX /var/www/html
 USER apache
-EXPOSE 80
+EXPOSE 8080
 CMD /usr/sbin/httpd -D FOREGROUND
