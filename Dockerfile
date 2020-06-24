@@ -1,5 +1,6 @@
 FROM centos:7
-RUN yum -y install httpd; yum clean all; systemctl enable httpd.service
+RUN yum -y install httpd;
+RUN yum -y install php; yum clean all; systemctl enable httpd.service
 RUN sed -i "s/Listen 80/Listen 8080/" /etc/httpd/conf/httpd.conf && \
   chown apache:0 /etc/httpd/conf/httpd.conf && \
   chmod g+r /etc/httpd/conf/httpd.conf && \
